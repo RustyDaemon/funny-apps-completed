@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+@layer base {
+	* {
+		@apply font-mono;
+	}
+
+	body {
+		@apply bg-gray-950 text-green-400 overflow-x-hidden;
+		font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono',
+			'Source Code Pro', 'Menlo', 'Consolas', 'Courier New', monospace;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+@keyframes blink {
+	0%,
+	50% {
+		opacity: 1;
+	}
+	51%,
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes trot {
+	0% {
+		transform: translateX(-100px);
+	}
+	100% {
+		transform: translateX(calc(100vw + 100px));
+	}
+}
+
+@keyframes flash {
+	0%,
+	100% {
+		background-color: rgb(15 23 42);
+	}
+	50% {
+		background-color: rgb(220 38 38);
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes glow {
+	0%,
+	100% {
+		text-shadow: 0 0 5px currentColor;
+	}
+	50% {
+		text-shadow: 0 0 20px currentColor;
+	}
+}
+
+.blink {
+	animation: blink 1s infinite;
+}
+
+.trot {
+	animation: trot 4s linear infinite;
+}
+
+.flash {
+	animation: flash 0.5s ease-in-out 6;
+}
+
+.typing {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing 0.5s steps(40, end);
+}
+
+.glow {
+	animation: glow 2s ease-in-out infinite;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+	.trot {
+		animation: trot 6s linear infinite;
+	}
+}

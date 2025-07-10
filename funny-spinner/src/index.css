@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-primary-50: #eff6ff;
+	--color-primary-500: #3b82f6;
+	--color-primary-600: #2563eb;
+	--color-primary-700: #1d4ed8;
+
+	--animate-spin-slow: spin 1s linear infinite;
+	--animate-spin-medium: spin 0.75s linear infinite;
+	--animate-spin-fast: spin 0.5s linear infinite;
+	--animate-bounce-slow: bounce 2s infinite;
+}
+
+@layer base {
+	body {
+		font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	}
+
+	/* Hide scrollbars globally while maintaining functionality */
+	* {
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+	}
+
+	*::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
+	}
+
+	/* Additional scrollbar hiding and smooth transitions */
+	html,
+	body {
+		overflow-x: hidden;
+	}
+
+	/* Ensure smooth background transitions */
+	html {
+		transition: background-color 0.3s ease;
+	}
+
+	/* Custom scrollable area styling */
+	.scrollable-area {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.scrollable-area::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@layer utilities {
+	.spinner-section {
+		transform-origin: center;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.spinner-section:hover {
+		filter: brightness(1.1);
+	}
+
+	.spinner-section.grayscale {
+		filter: grayscale(100%);
+		transition: filter 0.5s ease-in-out;
+	}
+
+	.spinner-rotation {
+		transition: none;
+	}
+
+	.spinner-rotation.spinning {
+		transition: transform cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	.spinner-wheel {
+		transition: transform cubic-bezier(0.2, 0, 0.1, 1);
+	}
+
+	.spinner-wheel.no-transition {
+		transition: none;
+	}
+}

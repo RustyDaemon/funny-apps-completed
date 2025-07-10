@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+:root {
+	--bg-opacity: 1;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		sans-serif;
+	background: rgb(0 0 0 / var(--bg-opacity));
+	color: black;
+	min-height: 100vh;
+}
+
+#root {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Disable text selection on UI elements */
+.no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Input field focus styles */
+.typing-input:focus {
+	outline: 2px solid #3b82f6;
+	outline-offset: 2px;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #4b5563;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #6b7280;
+}
+
+/* Smooth scrolling */
+.smooth-scroll {
+	scroll-behavior: smooth;
+}

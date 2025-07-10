@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+}
+
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-scale {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+.animate-pulse-scale {
+	animation: pulse-scale 2s ease-in-out infinite;
+}
+
+/* Custom utilities */
+.perspective-1000 {
+	perspective: 1000px;
+}
+
+.text-10xl {
+	font-size: 10rem;
+}
+
+/* Emoji reel animation effect */
+.reel-gradient {
+	-webkit-mask-image: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(0, 0, 0, 0.9) 20%,
+		rgba(0, 0, 0, 1) 50%,
+		rgba(0, 0, 0, 0.9) 80%,
+		transparent 100%
+	);
+	mask-image: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(0, 0, 0, 0.9) 20%,
+		rgba(0, 0, 0, 1) 50%,
+		rgba(0, 0, 0, 0.9) 80%,
+		transparent 100%
+	);
+}

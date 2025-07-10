@@ -1,0 +1,118 @@
+@import 'tailwindcss';
+
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	margin: 0;
+	place-items: center;
+}
+
+h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
+}
+
+button {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #1a1a1a;
+	cursor: pointer;
+	transition: border-color 0.25s;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+	a:hover {
+		color: #747bff;
+	}
+	button {
+		background-color: #f9f9f9;
+	}
+}
+
+/* Custom cursor styles for scratch-off game */
+.scratch-canvas {
+	cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='%23ffffff' fill-opacity='0.8' stroke='%23000000' stroke-width='2'/><circle cx='16' cy='16' r='6' fill='%23ff6b6b' fill-opacity='0.6'/></svg>")
+			16 16,
+		auto !important;
+	transition: transform 0.2s ease;
+}
+
+.scratch-canvas:hover {
+	transform: scale(1.01);
+}
+
+/* Eraser cursor style */
+.scratch-eraser {
+	cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><circle cx='12' cy='12' r='8' fill='white' stroke='black' stroke-width='2'/><circle cx='12' cy='12' r='3' fill='red'/></svg>")
+			12 12,
+		auto !important;
+}
+
+/* Ensure smooth animations */
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(139, 92, 246, 0.3);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(139, 92, 246, 0.5);
+}
+
+/* Scratch canvas gradient background */
+.scratch-canvas-gradient {
+	background: linear-gradient(135deg, #6b7280 0%, #4b5563 50%, #374151 100%);
+}
+
+.scratch-canvas-transparent {
+	background: transparent;
+}

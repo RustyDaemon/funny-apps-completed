@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#gradient)" />
+  
+  <!-- Spinner Wheel -->
+  <circle cx="256" cy="256" r="180" fill="#ffffff" stroke="#3b82f6" stroke-width="8"/>
+  
+  <!-- Spinner Sections -->
+  <path d="M 256 76 A 180 180 0 0 1 376 196 L 256 256 Z" fill="#ef4444"/>
+  <path d="M 376 196 A 180 180 0 0 1 376 316 L 256 256 Z" fill="#f97316"/>
+  <path d="M 376 316 A 180 180 0 0 1 256 436 L 256 256 Z" fill="#eab308"/>
+  <path d="M 256 436 A 180 180 0 0 1 136 316 L 256 256 Z" fill="#22c55e"/>
+  <path d="M 136 316 A 180 180 0 0 1 136 196 L 256 256 Z" fill="#3b82f6"/>
+  <path d="M 136 196 A 180 180 0 0 1 256 76 L 256 256 Z" fill="#a855f7"/>
+  
+  <!-- Center Circle -->
+  <circle cx="256" cy="256" r="24" fill="#1f2937"/>
+  
+  <!-- Spinner Arrow -->
+  <polygon points="256,50 270,80 242,80" fill="#1f2937"/>
+  
+  <!-- Target Emoji -->
+  <text x="256" y="380" text-anchor="middle" font-size="48" fill="#1f2937">🎯</text>
+  
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ddd6fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

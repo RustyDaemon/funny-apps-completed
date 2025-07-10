@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+/* Custom scrollbar styles for the terminal */
+.scrollbar-thin {
+	scrollbar-width: thin;
+}
+
+.scrollbar-track-emerald-900 {
+	scrollbar-color: #10b981 #064e3b;
+}
+
+.scrollbar-thumb-emerald-700 {
+	scrollbar-color: #047857 #064e3b;
+}
+
+/* Webkit scrollbar styles for better browser support */
+.scrollbar-thin::-webkit-scrollbar {
+	width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+	background: #064e3b;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+	background: #047857;
+	border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+	background: #10b981;
+}
+
+/* Global styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Courier New', 'Lucida Console', monospace;
+	background-color: #000;
+	overflow-x: hidden;
+}
+
+/* Terminal text glow effect */
+.terminal-text {
+	text-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+/* Courier font family */
+.courier-font {
+	font-family: 'Courier New', 'Lucida Console', monospace;
+}
+
+/* Printer glow effect */
+.printer-glow {
+	box-shadow: 0 0 50px rgba(16, 185, 129, 0.3),
+		inset 0 0 100px rgba(16, 185, 129, 0.1);
+}
+
+/* CRT screen effect */
+.crt-screen {
+	background: linear-gradient(
+		90deg,
+		transparent 50%,
+		rgba(16, 185, 129, 0.03) 50%
+	);
+	background-size: 2px 2px;
+}
